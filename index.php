@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true)
+{
+    echo 'go';
+    header("location: app/index.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,17 +36,19 @@
                 <div class="card p-2 p-md-5 m-md-5 shadow w-sm-50 ">
                     <h1 class="card-title text-center text-custom-red">Work Manager</h1>
                     <h2 class="card-title text-center">Login</h2>
-                    <form>
+                    <form action="login.php" method="POST">
                         <div class="form-group py-2">
                             <label for="InputEmail">Email address</label>
-                            <input type="email" class="form-control" id="InputEmail" placeholder="Enter email">
+                            <input type="email" name="email" class="form-control" id="InputEmail"
+                                placeholder="Enter email" required>
                         </div>
                         <div class="form-group py-2">
                             <label for="InputPassword">Password</label>
-                            <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                            <input type="password" name="password" class="form-control" id="InputPassword"
+                                placeholder="Password" required>
                         </div>
                         <div class="form-group d-flex align-items-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" name="login" value="submit" class="btn btn-primary">Submit</button>
                             <p class="ms-2 pt-3">
                                 Don't have account?
                                 <a href="register.html" class="text-decoration-none">Create Account</a>
