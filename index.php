@@ -51,7 +51,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true)
                             <button type="submit" name="login" value="submit" class="btn btn-primary">Submit</button>
                             <p class="ms-2 pt-3">
                                 Don't have account?
-                                <a href="register.html" class="text-decoration-none">Create Account</a>
+                                <a href="register.php" class="text-decoration-none">Create Account</a>
                             </p>
                         </div>
 

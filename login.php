@@ -51,13 +51,6 @@ window.location = "index.php";
     } 
     else{
         echo 'Fill-Up Login Form First';
-        ?>
-
-        <script type="text/javascript">
-            window.location = "index.php";
-        </script>
-
-        <?php
     }
      $conn->close();
     ?>
