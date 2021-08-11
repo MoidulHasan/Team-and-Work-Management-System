@@ -41,7 +41,6 @@
             <a class="navbar-brand text-bolder fw-bold" href="index.php">Work Manager</a>
         </div>
 
-
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <!-- Topbar Navbar -->
             <ul class="navbar-nav nav-right d-flex">
@@ -153,45 +152,136 @@
                         </li>
                     </ul>
                 </li>
+
             </ul>
         </div>
-
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body"><?php //echo  $_SESSION['FIRST_NAME']; ?> are you sure do you want to
-                        logout?
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="..\logout.php">Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
     </nav>
     <!-- End of Topbar -->
 
+    <!-- MAIN CONTENT START-->
+    <main class="overflow-hidden">
+        <div class="row p-3  d-flex justify-content-around">
+
+            <!-- SIDE BAR START-->
+            <div class="col-3 col-md-2 bg-white rounded-3 shadow d-none d-md-block h-50" id="sideBar">
+                <!-- Sidebar -->
+                <ul class="navbar-nav sidebar sidebar-dark accordion " id="accordionSidebar">
+
+                    <!-- Sidebar - Brand ONLY FOR DESKTOP-->
+                    <a class="sidebar-brand d-md-flex align-items-center justify-content-center text-decoration-none fs-5 py-3 d-none"
+                        href="index.php">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="sidebar-brand-text p-2">
+                            Work Manager<sup>1.0</sup>
+                        </div>
+                    </a>
+
+                    <!-- Sidebar - Brand ONLY FOR MOBLE-->
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center text-decoration-none fs-5 py-3 d-md-none"
+                        href="index.php">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="sidebar-brand-text">WM<sup>1.0</sup></div>
+                    </a>
+
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
+
+                    <!-- Nav Item - Dashboard For desktop-->
+                    <li class="nav-item py-3 fs-6 text-center bg-custom rounded mt-2 d-none d-md-block">
+                        <a class="nav-link p-0" href="index.php">
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                            <span class="fs-6">Dashboard</span></a>
+                    </li>
+
+                    <!-- Nav Item - Dashboard for mobile-->
+                    <li class="nav-item py-3 fs-6 text-center bg-custom rounded mt-2 d-block d-md-none">
+                        <a class="nav-link p-0" href="index.php">
+                            <i class="fas fa-fw fa-tachometer-alt"></i>
+                            <span class="fs-6">DB</span></a>
+                    </li>
+
+
+                    <!-- Nav Item - Pages Collapse Menu -->
+                    <li class="nav-item bg-custom rounded p-2 mt-2">
+                        <a class="nav-link collapsed text-center" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span>Work</span>
+                        </a>
+                        <div id="collapseOne" class="collapse " aria-labelledby="headingTwo"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white p-2 collapse-inner rounded">
+                                <a class="collapse-item text-decoration-none text-dark" href="#">My Work</a>
+                                <br>
+                                <a class="collapse-item text-decoration-none" href="#">Create Work</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Nav Item - Members Collapse Menu -->
+                    <li class="nav-item bg-custom rounded mt-2 p-2">
+                        <a class="nav-link collapsed text-center" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                            <span>Team</span>
+                        </a>
+                        <div id="collapseUtilities" class="collapse " aria-labelledby="headingUtilities"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white p-2 collapse-inner rounded">
+                                <h6 class="collapse-header"></h6>
+                                <a class="collapse-item text-decoration-none" href="#">My Team</a>
+                                <br>
+                                <a class="collapse-item text-decoration-none" href="#">Join Team</a>
+                                <br>
+                                <a class="collapse-item text-decoration-none" href="#">Create Team</a>
+                            </div>
+                        </div>
+                    </li>
 
 
 
+
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+
+                </ul>
+                <!-- End of Sidebar -->
+            </div>
+            <!-- SIDE BAR END-->
+
+            <!-- CONTENT SECTION START -->
+            <div class="col-8 col-md-9 bg-white shadow border rounded-3 p-0" id="mainPanel" style="height: 30rem">
+                <!-- Page Heading -->
+                <h3 class="text-center bg-primary text-white p-0 m-0 shadow">Dashboard</h3>
+            </div>
+            <!-- CONTENT SECTION END -->
+        </div>
+    </main>
+    <!-- MAIN CONTENT END-->
+
+    <?php
+        require_once "includes/modal.php";
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <script>
-
+    // Toggle the side navigation
+    $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
+        if ($("#sideBar").hasClass("d-none")) {
+            $('#sideBar').removeClass('d-none');
+            $('#sideBar').addClass('d-block');
+            $('#mainPanel').removeClass('col-12');
+            $('#mainPanel').addClass('col-8');
+        } else if ($("#sideBar").hasClass("d-block")) {
+            $('#sideBar').removeClass('d-block');
+            $('#sideBar').addClass('d-none');
+            $('#mainPanel').removeClass('col-8');
+            $('#mainPanel').addClass('col-12');
+        };
+    });
     </script>
 </body>
 
