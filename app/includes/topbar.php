@@ -20,7 +20,7 @@
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    99+
+                    9+
                 </span>
 
             </a>
@@ -43,7 +43,7 @@
                         amet.</a></li>
                 <li class="dropdown-item"><a class="text-decoration-none" href="">Lorem ipsum dolor sit
                         amet.</a></li>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                <a class="dropdown-item text-center small text-gray-500" href="alerts.php">Show All Alerts</a>
 
             </ul>
         </li>
@@ -55,7 +55,7 @@
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Alerts -->
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    1O+
+                    7+
                 </span>
             </a>
             <!-- Dropdown - Messages -->
@@ -77,7 +77,7 @@
                         amet.</a></li>
                 <li class="dropdown-item"><a class="text-decoration-none" href="">Lorem ipsum dolor sit
                         amet.</a></li>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Message</a>
+                <a class="dropdown-item text-center small text-gray-500" href="message.php">Show All Message</a>
             </ul>
         </li>
 
@@ -94,19 +94,19 @@
                 aria-labelledby="userDropdown">
 
                 <li class="dropdown-item ">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="profile.php">
                         <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Profile
                     </a>
                 </li>
                 <li class="dropdown-item">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="settings.php">
                         <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                         Settings
                     </a>
                 </li>
                 <li class="dropdown-item">
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="activity.php">
                         <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                         Activity Log
                     </a>

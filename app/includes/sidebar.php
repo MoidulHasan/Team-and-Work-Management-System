@@ -54,10 +54,10 @@
                     <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white p-0 p-md-2 collapse-inner rounded ">
                             <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3 fs-6"
-                                href="#">View</a>
+                                href="work-view.php">View</a>
 
                             <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3 fs-6"
-                                href="#">Create</a>
+                                href="work-create.php">Create</a>
                         </div>
                     </div>
                 </li>
@@ -73,11 +73,11 @@
                         <div class="bg-white p-0 p-md-2 collapse-inner rounded">
                             <h6 class="collapse-header"></h6>
                             <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3"
-                                href="#">View</a>
+                                href="team-view.php">View</a>
                             <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3"
-                                href="#">Join</a>
+                                href="team-join.php">Join</a>
                             <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3"
-                                href="#">Create</a>
+                                href="team-create.php">Create</a>
                         </div>
                     </div>
                 </li>
