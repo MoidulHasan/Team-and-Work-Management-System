@@ -1,6 +1,6 @@
 <!-- MAIN CONTENT START-->
 <main class="overflow-hidden">
-    <div class="row p-3  d-flex justify-content-around">
+    <div class="row p-3  d-flex justify-content-around ">
 
         <!-- SIDE BAR START-->
         <div class="col-3 col-md-2 bg-white rounded-3 shadow d-none d-md-block h-50" id="sideBar">
