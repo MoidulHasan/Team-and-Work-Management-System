@@ -72,13 +72,13 @@ $(document).ready(function() {
 
     $("form").submit(function(event) {
         var formData = {
-            teamname: $("#projectname").val(),
-            teamDesc: $("#project-descriptions").val(),
+            projectname: $("#projectname").val(),
+            projectDesc: $("#project-descriptions").val(),
         };
 
         $.ajax({
             type: "POST",
-            url: "create-team-proc.php",
+            url: "create-work-proc.php",
             data: formData,
             //dataType: "json",
             success: function(data) {
