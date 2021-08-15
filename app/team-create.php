@@ -21,10 +21,10 @@
                         <h6 id="tname_response"></h6>
                     </div>
                 </div>
-                <div id="projectHelp" class="form-text m-0">Select an unique project name.</div>
+                <div id="projectHelp" class="form-text m-0">Select an unique team name.</div>
             </div>
             <div class="mb-3">
-                <label for="project-descriptions" class="form-label">Project Descriptions</label>
+                <label for="project-descriptions" class="form-label">Team Descriptions</label>
                 <textarea class="form-control" form="createteamform" name="teamDesc" rows="5"
                     id="project-descriptions"></textarea>
             </div>

@@ -22,7 +22,7 @@ else{
             echo '<div class="text-center w-100 h-100 d-flex align-items-center justify-content-center">
                 <h4 class="text-center w-75 h-75 d-flex  align-items-center justify-content-center">
                     <i class="fas fa-check-circle text-primary"></i> 
-                    Registration Complete!!
+                    Team Created!!
                 </h4>
             </div>';
         }

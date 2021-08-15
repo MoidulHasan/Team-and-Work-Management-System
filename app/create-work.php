@@ -6,19 +6,19 @@
 
 <!-- CONTENT SECTION START -->
 <div class="col-12 col-md-9 bg-white  border rounded-3 p-0 overflow-hidden" id="mainPanel" style="height: 30rem">
-    <h3 class="text-center bg-primary text-white p-0 m-0 shadow">Create Project</h3>
+    <h3 class="text-center bg-primary text-white p-0 m-0 shadow">Create Work</h3>
 
     <div class="h-100 p-3" style="overflow-y: scroll;" id="content">
         <form id="#createteamform">
             <div class="mb-3">
-                <label for="projectname" class="form-label">Project Name</label>
+                <label for="projectname" class="form-label">Team Name</label>
                 <div class="row align-items-center">
                     <div class="col-8">
                         <input type="text" name="projectname" class="form-control" id="projectname"
                             aria-describedby="projectHelp">
                     </div>
                     <div class="col-4">
-                        <h6 id="projectName_response"></h6>
+                        <h6 id="projectNameResponse"></h6>
                     </div>
                 </div>
                 <div id="projectHelp" class="form-text m-0">Select an unique project name.</div>
@@ -54,7 +54,7 @@ $(document).ready(function() {
         if (projectname != '') {
 
             $.ajax({
-                url: 'api/team-list.php',
+                url: 'api/work-list.php',
                 type: 'post',
                 data: {
                     projectname: projectname
