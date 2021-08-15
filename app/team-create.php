@@ -9,7 +9,7 @@
     <h3 class="text-center bg-primary text-white p-0 m-0 shadow">Create Team</h3>
 
     <div class="h-100 p-3" style="overflow-y: scroll;" id="content">
-        <form  id="#createteamform">
+        <form id="#createteamform">
             <div class="mb-3">
                 <label for="projectname" class="form-label">Team Name</label>
                 <div class="row align-items-center">
@@ -70,45 +70,26 @@ $(document).ready(function() {
         }
     });
 
-    // $("#createteamform").submit(function(e) {
-    //     //e.preventDefault();
-    //     var teamname = $("#projectname").val().trim();
-    //     var teamDesc = $("#teamDesc").val().trim();
-    //     $.ajax({
-    //         url: 'create-team-proc.php',
-    //         type: 'post',
-    //         data: {
-    //             teamname: teamname,
-    //             teamDesc: teamDesc
-    //         },
-    //         success: function(response) {
-    //             alert(response);
-    //             $('#content').html(response);
+    $("form").submit(function(event) {
+        var formData = {
+            teamname: $("#projectname").val(),
+            teamDesc: $("#project-descriptions").val(),
+        };
 
-    //         }
-    //     });
-    // });
+        $.ajax({
+            type: "POST",
+            url: "create-team-proc.php",
+            data: formData,
+            //dataType: "json",
+            success: function(data) {
+                //alert(data);
+                $('#content').html(data);
+            }
 
-    $("form").submit(function (event) {
-    var formData = {
-        teamname: $("#projectname").val(),
-        teamDesc: $("#project-descriptions").val(),
-    };
+        });
 
-    $.ajax({
-      type: "POST",
-      url: "create-team-proc.php",
-      data: formData,
-      //dataType: "json",
-      success: function(data){
-          //alert(data);
-        $('#content').html(data);
-      }
-
+        event.preventDefault();
     });
-
-    event.preventDefault();
-  });
 
 });
 </script>
