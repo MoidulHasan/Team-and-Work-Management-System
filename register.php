@@ -78,11 +78,11 @@
     $("#InputPassword1").keyup(
         function() {
 
-            var pass=$("#InputPassword1").val();
+            var pass = $("#InputPassword1").val();
 
             // Validate lowercase letters
             var lowerCaseLetters = /[a-z]/g;
-            if(lowerCaseLetters.test(pass)==true) {  
+            if (lowerCaseLetters.test(pass) == true) {
                 $("#letter").removeClass("invalid");
                 $("#letter").addClass("valid");
             } else {
@@ -92,7 +92,7 @@
 
             // Validate uppercase letters
             var upperCaseLetters = /[A-Z]/g;
-            if(upperCaseLetters.test(pass)==true) {  
+            if (upperCaseLetters.test(pass) == true) {
                 $("#capital").removeClass("invalid");
                 $("#capital").addClass("valid");
             } else {
@@ -102,7 +102,7 @@
 
             // Validate Numbers
             var numbers = /[0-9]/g;
-            if(numbers.test(pass)==true) {  
+            if (numbers.test(pass) == true) {
                 $("#number").removeClass("invalid");
                 $("#number").addClass("valid");
             } else {
@@ -111,8 +111,7 @@
             }
 
             // Validate Length
-            if(pass.length>8)
-            {  
+            if (pass.length > 8) {
                 $("#length").removeClass("invalid");
                 $("#length").addClass("valid");
             } else {
@@ -126,7 +125,7 @@
             $("#message").hide();
         }
     );
-    
+
     $("form").submit(function(e) {
         e.preventDefault();
         var password = $("#InputPassword1").val();
@@ -137,61 +136,7 @@
             e.currentTarget.submit();
         }
     });
-    // $("#btnSubmit").click(function () {
-    //     var password = $("#InputPassword1").val();
-    //     var confirmPassword = $("#InputPassword2").val();
-    //     if (password != confirmPassword) {
-    //         alert("Passwords do not match.");
-    //         return false;
-    //     }
-    //     else{
-    //         $("form").submit();
-    //     }
-    // });
-    // });
-    // jQuery(document).ready(function($) {
 
-    //     $('#btnSubmit').click(function(e) {
-    //         var $formId = $(this).parents('form');
-    //         var formAction = $formId.attr('action');
-    //         defaulttextRemove();
-    //         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    //         $('li', $formId).removeClass('error');
-    //         $('span.error').remove();
-    //         $('.required', $formId).each(function() {
-    //             var inputVal = $(this).val();
-    //             var $parentTag = $(this).parent();
-    //             if (inputVal == '') {
-    //                 $parentTag.addClass('error').append(
-    //                     '<span class="error">Required field</span>');
-    //             }
-    //             if ($(this).hasClass('email') == true) {
-    //                 if (!emailReg.test(inputVal)) {
-    //                     $parentTag.addClass('error').append(
-    //                         '<span class="error">Enter a valid email address.</span>');
-    //                 }
-    //             }
-    //         });
-    //         if ($('span.error').length == "0") {
-    //             $formId.append($loading.clone());
-    //             $('fieldset', $formId).hide();
-    //             $.post(formAction, $formId.serialize(), function(data) {
-    //                 $('.loading').remove();
-    //                 $formId.append(data).fadeIn();
-    //             });
-    //         }
-    //         e.preventDefault();
-    //     });
-    // });
-
-    // function defaulttextRemove() {
-    //     $('.default').each(function() {
-    //         var defaultVal = $(this).attr('title');
-    //         if ($(this).val() == defaultVal) {
-    //             $(this).val('');
-    //         }
-    //     });
-    // }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
