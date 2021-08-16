@@ -17,7 +17,7 @@
                     <label class="form-check-label" for="CheckAll">All</label>
                 </div>
                 <div class="form-check mx-1 mx-md-5">
-                    <input class="form-check-input" type="radio" id="CheckCreated" name="Teamtype" value="Created">
+                    <input class="form-check-input " type="radio" id="CheckCreated" name="Teamtype" value="Created">
                     <label class="form-check-label" for="CheckCreated">Created</label>
                 </div>
                 <div class="form-check mx-1 mx-md-5">

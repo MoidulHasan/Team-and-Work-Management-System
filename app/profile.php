@@ -1,4 +1,5 @@
 <?php
+session_start();
     require_once "includes/header.php";
     require_once "includes/topbar.php";
     require_once "includes/sidebar.php";
@@ -10,7 +11,13 @@
     <h3 class="text-center bg-primary text-white p-0 m-0 shadow">My Profile</h3>
 
     <div class="h-100 p-3" style="overflow-y: scroll;">
-        
+        <div>
+            <?php
+            
+            echo '<h4>Email: '; echo $_SESSION['email'];
+            echo '</h4>';
+            ?>
+        </div>
     </div>
 </div>
 <!-- CONTENT SECTION END -->

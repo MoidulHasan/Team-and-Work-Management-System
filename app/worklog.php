@@ -97,8 +97,24 @@
                 </form>
 
 
-                <div id="textMessage" class="border p-3 position-absolute w-25" style="overflow-y: scroll; height: 270px; ">
-                    
+                <div id="textMessage" class="border p-3 position-absolute w-25"
+                    style="overflow-y: scroll; height: 270px; ">
+                    <?php
+                        $sql2 = "SELECT * FROM worktext WHERE worktextWorkid='$workId'";
+                        $result2 = $conn->query($sql2);
+                        while($row2 = $result2->fetch_assoc()) {
+                            echo '
+                                <div class="card my-3">
+                                        <h6 class="ps-2">
+                                        ';
+                                        echo $row2['worktextRole'];
+                                        echo '</h6>
+                                        <p class="ps-4">';
+                                        echo $row2['worktext'];
+                                        echo '</p>
+                                        </div>';            
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -196,26 +212,26 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
-    $("#Addtext").submit(function(event) {
-        var formData = {
-            teamname: $("#projectname").val(),
-            teamDesc: $("#project-descriptions").val(),
-        };
+    // $("#Addtext").submit(function(event) {
+    //     var formData = {
+    //         teamname: $("#projectname").val(),
+    //         teamDesc: $("#project-descriptions").val(),
+    //     };
 
-        $.ajax({
-            type: "POST",
-            url: "create-team-proc.php",
-            data: formData,
-            //dataType: "json",
-            success: function(data) {
-                //alert(data);
-                $('#content').html(data);
-            }
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "create-team-proc.php",
+    //         data: formData,
+    //         //dataType: "json",
+    //         success: function(data) {
+    //             //alert(data);
+    //             $('#content').html(data);
+    //         }
 
-        });
+    //     });
 
-        event.preventDefault();
-    });
+    //     event.preventDefault();
+    // });
 
 });
 </script>

@@ -74,8 +74,8 @@
                             <h6 class="collapse-header"></h6>
                             <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3"
                                 href="team-view.php">View</a>
-                            <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3"
-                                href="team-join.php">Join</a>
+                            <!-- <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3"
+                                href="team-join.php">Join</a> -->
                             <a class="collapse-item text-decoration-none text-dark dropdown-item p-0 rounded-3"
                                 href="team-create.php">Create</a>
                         </div>
