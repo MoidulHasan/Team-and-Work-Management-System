@@ -11,20 +11,20 @@
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
 ?>
-
 <!-- CONTENT SECTION START -->
 <div class="col-12 col-md-9 bg-white  border rounded-3 p-0 overflow-hidden" id="mainPanel" style="height: 30rem">
     <h4 class="text-center bg-primary text-white p-0 m-0 shadow d-flex justify-content-between">
-        <span>
+    <div class="text-center">
+            <a href="worklog.php?workId=<?php echo $workId;?>" class="btn btn-light btn-sm shadow mx-2" href="">Work Log</a>
+        </div>    
+    <span>
             Project Name: <?php echo $row['work_name'];?>
         </span>
         
         <span>
             Project ID: <?php echo $workId;?>
         </span>
-        <div class="text-center">
-            <a  class="btn btn-light shadow" href="">View Work Log</a>
-        </div>
+        
         
 
     </h4>
