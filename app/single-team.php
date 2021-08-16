@@ -34,12 +34,10 @@
                 <h5>About Members:</h5>
                 <form class="d-flex">
                     <div class="mx-1">
-                        <label for="recipient-name" class="col-form-label">Members Email:</label>
-                        <input type="text" class="form-control" id="MembersEmail" required>
+                        <input type="text" placeholder="Members Email" class="form-control" id="MembersEmail" required>
                     </div>
                     <div class="mx-1">
-                        <label for="message-text" class="col-form-label">Members Role:</label>
-                        <input type="text" class="form-control" id="MembersRole" required>
+                        <input type="text" placeholder="Members Role" class="form-control" id="MembersRole" required>
                     </div>
                     <input type="hidden" id="inputTeamId" name="teamId" value="<?php echo $teamId;?>">
                     <div class="mx-1">
